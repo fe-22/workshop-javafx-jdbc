@@ -1,5 +1,6 @@
 package application;
 
+import java.awt.ScrollPane;
 import java.io.IOException;
 
 import javafx.application.Application;
@@ -13,8 +14,11 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/MainView.fxml"));
-			Parent parent = loader.load();
-			Scene mainScene = new Scene(parent);
+			Parent scrollPane = loader.load();
+			
+		
+			
+			Scene mainScene = new Scene(scrollPane);
 			primaryStage.setScene(mainScene);
 			primaryStage.setTitle("Sample JavaFX application");
 			primaryStage.show();
